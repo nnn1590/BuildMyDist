@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      【2019年版】Ubuntu系のLinuxディストリビューションを自作しよう　カスタマイズ編
+    </title>
+    <meta name="description" content="
+      Ubuntu派生のLinux系OSの自作方法を解説したサイトです。
+      SereneLinuxの開発者が初心者でもできるUbuntu派生OSの作成方法を画像つきで解説します。
+      BodhiBuilderにあるバグの修正方法を解説しているのはここだけ！
+    ">
+    <link rel="stylesheet" href="../style/main-resp.css" media="screen and (max-width: 699px)">
+    <link rel="stylesheet" href="../style/main.css" media="screen and (min-width: 700px)">
+    <link rel="stylesheet" href="../code/vs2015.css">
+    <script src="../code/highlight.pack.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- class="prettyprint linenums" でコードに色付け -->
+    <!-- <pre><code class="prettyprint linenums"></code></pre> -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        【2019年版】Ubuntu系のOSを自作しよう　カスタマイズ編
+      </h1>
+        <p>
+          BodhiBuilderを用いてオリジナルのOSを作成します。
+        </p>
+        <p>
+          自分の好きなデスクトップ環境やソフトウェアを入れてオリジナルのOSを作成しましょう。
+        </p>
+        <p>
+          実際に製作中のOS『SereneLinux』の実例を挙げながらわかりやすく解説していきます。
+          
+        </p>
+        <nav>
+          <ul class="topnav">
+            <li><a href="../index.html">トップページ</a></li>
+            <li><a href="preparation.html">準備編</a></li>
+            <li><a class="active" href="customize.html">カスタマイズ編</a></li>
+            <li><a href="makeiso.html">ISO作成編</a></li>
+            <li><a href="distribution.html">配布編</a></li>
+            <li class="right"><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h2>
+        カスタマイズしよう
+      </h2>
+      <p>
+        実際にBasixをカスタマイズしていきましょう。
+      </p>
+      <p>
+        基本的なカスタマイズは以下のとおりです
+      </p>
+      <p>
+        <ol>
+          <li>
+            デスクトップ環境の選択
+          </li>
+          <li>
+            ディスプレイマネージャの選択
+          </li>
+          <li>
+            テーマの選択
+          </li>
+          <li>
+            アイコンの選択
+          </li>
+          <li>
+            パッケージの削除
+          </li>
+          <li>
+            パッケージのインストール
+          </li>
+          <li>
+            デスクトップのカスタマイズ
+          </li>
+          <li>
+            設定ファイルの保存
+          </li>
+          <li>
+            インストールスライドの変更
+          </li>
+          <li>
+            OS名の変更
+          </li>
+        </ol>
+      </p>
+      <p>
+        非常に長くなるので頑張って読んでください...
+      </p>
+      <p>
+        カスタマイズくらいできるわ！って人は8から読んでください
+      </p>
+      <p>
+        8以降はOS作成だけのカスタマイズなので知らない人もいるかもしれません
+      </p>
+
+
+      <h2>
+        1.デスクトップ環境の選択
+      </h2>
+      <p>
+        まずはデスクトップ環境を決めます
+      </p>
+      <p>
+        デスクトップ環境を決める上で重要になるのが「ターゲットにするユーザー」です
+      </p>
+      <p>
+        準備編で決めたことがここで重要になってきます
+      </p>
+      <p>
+        以下にそれぞれのデスクトップ環境の特徴を書いていくので好きなものを選んでください
+      </p>
+      <p>
+        重くはなりますが、複数のデスクトップ環境を搭載することもできます
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>デスクトップ環境</th>
+            <th>標準ディストリビューション</th>
+            <th>特徴</th>
+            <th>重さ</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr>
+            <th>
+              Gnome3
+            </th>
+            <td label="標準ディストリビューション">
+                Ubuntu
+            </td>
+            <td label="特徴">
+              <p>
+                操作が独特
+                <br>
+                洗練されている
+              </p>
+            </td>
+            <td label="重さ">
+                やや重い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              Xfce4
+            </th>
+            <td label="標準ディストリビューション">
+                Xubuntu
+            </td>
+            <td label="特徴">
+              <p>
+                標準のパネル設定はMac風になっている
+                <br>
+                細かいカスタマイズが可能
+                <br>
+                標準のテーマ、アイコンがダサい
+              </p>
+            </td>
+            <td label="重さ">
+                軽い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              KDE
+            </th>
+            <td label="標準ディストリビューション">
+              Kubuntu
+            </td>
+            <td label="特徴">
+              <p>
+                非常に高機能で、美しいUI
+                <br>
+                比較的カスタマイズしにくい
+              </p>
+            </td>
+            <td label="重さ">
+              最も重い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              Lxde
+            </th>
+            <td label="標準ディストリビューション">
+              Lubuntu
+              <br>
+              Basix
+            </td>
+            <td label="特徴">
+              <p>
+                 Windows風のUI
+                <br>
+                ものすごく軽量
+                <br>
+                標準のテーマ、アイコンが汚い
+              </p>
+            </td>
+            <td label="重さ">
+              最も軽い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              Lxqt
+            </th>
+            <td label="標準ディストリビューション">
+              ---
+            </td>
+            <td label="特徴">
+              <p>
+                Lxdeと非常に似ている
+                <br>
+                細かいカスタマイズが可能
+                <br>
+                標準のテーマ、アイコンがダサい
+              </p>
+            </td>
+            <td label="重さ">
+              最も軽い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+               Unity
+            </th>
+            <td label="標準ディストリビューション">
+                Ubuntu（17.10まで）
+            </td>
+            <td label="特徴">
+              <p>
+                Ubuntu版のGnomeと似たUI
+                <br>
+                殆どカスタマイズできない
+                <br>
+                今後サポートされるか不明
+              </p>
+            </td>
+            <td label="重さ">
+              最も重い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              Cinnamon
+            </th>
+            <td label="標準ディストリビューション">
+              ---
+            </td>
+            <td label="特徴">
+              <p>
+                Windows風のUI
+                <br>
+                あまりカスタマイズできない
+                <br>
+                高機能で美しい
+              </p>
+            </td>
+            <td label="重さ">
+              やや重い
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Mate
+            </th>
+            <td label="標準ディストリビューション">
+              Ubuntu Mate
+            </td>
+            <td label="特徴">
+              <p>
+                Windows風のUI
+                <br>
+                Gnome2（Ubuntu 10.10までのUI）からフォーク
+                <br>
+                シンプル
+              </p>
+            </td>
+            <td label="重さ">
+              やや軽い
+            </td>
+          </tr>
+
+          
+        </tbody>
+      </table>
+
+      <p>
+        おすすめはXfce4です
+      </p>
+      <p>
+        軽量でカスタマイズ性が高いので自由に改造することができます
+      </p>
+      <p>
+        SereneLinuxもXfce4をベースにしています
+      </p>
+      <p>
+        今回はXfce4を選んだとして関節を勧めていこうと思います
+      </p>
+
+
+
+      <h2>
+        2.ディスプレイマネージャの選択
+      </h2>
+      <p>
+        ディスプレイマネージャとは、いわゆるログイン画面です
+      </p>
+      <p>
+        以下の様なものがあります
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>ディスプレイマネージャ</th>
+            <th>標準ディストリビューション</th>
+            <th>特徴</th>
+            <th>重さ</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr>
+            <th>
+              GDM3
+            </th>
+            <td label="標準ディストリビューション">
+                Ubuntu
+            </td>
+            <td label="特徴">
+              <p>
+                Gnomeのディスプレイマネージャ
+                <br>
+                洗練されており、美しいUI
+                <br>
+                カスタマイズしにくい
+              </p>
+            </td>
+            <td label="重さ">
+              やや重い
+            </td>
+          </tr>
+
+
+          <tr>
+            <th>
+              LightDM
+            </th>
+            <td label="標準ディストリビューション">
+                Xubuntu、Lubuntu、Ubuntu（17.10まで）
+            </td>
+            <td label="特徴">
+              <p>
+                非常に軽い
+                <br>
+                カスタマイズが可能
+                <br>
+                標準のテーマ、アイコンがダサい
+              </p>
+            </td>
+            <td label="重さ">
+              軽い
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              KDM
+            </th>
+            <td label="標準ディストリビューション">
+                Kubuntu
+            </td>
+            <td label="特徴">
+              <p>
+                リッチなUI
+                <br>
+                KDEのディスプレイマネージャ
+              </p>
+            </td>
+            <td label="重さ">
+              ---
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              SDDM
+            </th>
+            <td label="標準ディストリビューション">
+              Lxqt
+            </td>
+            <td label="特徴">
+              <p>
+                Qtのみで書かれている
+              </p>
+            </td>
+            <td label="重さ">
+              ---
+            </td>
+          </tr>
+
+          
+        </tbody>
+      </table>
+
+      <p>
+        今回は最も一般的なLightDMを使用していきます
+      </p>
+      <p>
+        （筆者はLightDMとGDMしか使用したこと無いのでSDDMやKDMはわからないです）
+      </p>
+      <h3>
+        Greeterについて
+      </h3>
+      <p>
+        LightDMには「Greeter」と呼ばれるテーマを適用させる機能があります（他のDMにもあるのかな？）
+      </p>
+      <p>
+        SereneLinuxではUbuntu17.10まで使われていた「unity-greeter」を適用させています
+      </p>
+      <p>
+        この「Unity-Greeter」はインストール後に手動で設定をする必要があります
+      </p>
+      <p>
+        参考にしたのは以下のサイトです
+      </p>
+      <p>
+        <a href="https://cialu.net/how-to-solve-failed-to-start-session-with-lightdm-and-xfce/" target="_blank">How to solve ‘Failed to start session’ with LightDM and Xfce</a>
+      </p>
+      <p>
+        上のサイトと同じになってしまいますが、一応こちらでも解説しようと思います
+      </p>
+      <p>
+        <ol>
+          <li>
+            unity-greeterをインストールする
+          </li>
+          <p>
+            これがないと始まりませんね
+          </p>
+          <pre><code>$ sudo apt-get -y install unity-greeter</code></pre>
+          <li>
+            設定ファイルを削除する
+          </li>
+          <p>
+            以下のコマンドを実行して設定ファイルを削除します
+          </p>
+          <p>
+            <pre><code>$ sudo rm /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf</code></pre>
+          </p>
+          <li>
+            新しい設定ファイルを作成する
+          </li>
+          <p>
+            以下のコマンドを実行するだけです
+          </p>
+          <p>
+            <pre><code>$ sudo touch /usr/share/lightdm/lightdm.conf.d/50-xfce-greeter.conf</code></pre>
+          </p>
+          <li>
+            設定ファイルを記述する
+          </li>
+          <p>
+            nanoを起動します
+          </p>
+          <pre><code>$ sudo nano /usr/share/lightdm/lightdm.conf.d/50-xfce-greeter.conf</code></pre>
+          <p>
+            以下のコードを書き込んで「Ctrl + O」を押して保存し、「Ctrl + X」で終了します
+          </p>
+          <pre><code>[SeatDefaults]
+greeter-session=unity-greeter
+user-session=xfce</code></pre>
+          <li>
+            再起動します
+          </li>
+          <pre><code>$ sudo reboot</code></pre>
+
+        </ol>
+      </p>
+
+      <h2>
+        テーマの選択
+      </h2>
+      <h3>
+        自分の好きなテーマを探す
+      </h3>
+      <p>
+        自分の好きなテーマをネット上で探して自分のOSのデフォルトにしましょう
+      </p>
+      <p>
+        テーマのライセンスさえOKで、現在のGTK3に準拠しているテーマなら何でも適用できます
+      </p>
+      <p>
+        SereneLinuxでは「Numix」というテーマを採用しています
+      </p>
+      <p>
+        テーマによってディストリビューションの印象を大きく変えることになるので慎重にに選んでください
+      </p>
+      <p>
+        テーマは以下のサイトから探すと簡単に見つけることができます
+      </p>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+      <p>
+        自分の考えたユーザのターゲットに合ったテーマを選ぶといいでしょう
+      </p>
+      <p>ライセンスをよく読み、再配布が可能かどうかを確かめてください</p>
+    </main>
+
+
+    <footer>
+      It is provided by SereneLinux.
+      <br>
+      Copyright
+      &copy; 2019 SereneTeam All Rights Reserved.
+      <img src="http://www.rays-counter.com/d432_f6_022/5ca3768641891/" alt="アクセスカウンター">
+    </footer>
+
+
+  </body>
+</html>

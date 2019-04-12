@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      【2019年版】Ubuntu系のLinuxディストリビューションを自作しよう
+    </title>
+    <meta name="description" content="
+      Ubuntu派生のLinux系OSの自作方法を解説したサイトです。
+      このサイトに関する情報を書いている場所です。
+    ">
+    <link rel="stylesheet" href="../style/main-resp.css" media="screen and (max-width: 699px)">
+    <link rel="stylesheet" href="../style/main.css" media="screen and (min-width: 700px)">
+    <link rel="stylesheet" href="../code/vs2015.css">
+    <script src="../code/highlight.pack.js"></script>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!-- class="prettyprint linenums" でコードに色付け -->
+    <!-- <pre><code class="prettyprint linenums"></code></pre> -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        【2019年版】Ubuntu系のOSを自作しよう
+      </h1>
+        <p>
+          BodhiBuilderを用いてオリジナルのOSを作成します。
+        </p>
+        <p>
+          自分の好きなデスクトップ環境やソフトウェアを入れてオリジナルのOSを作成しましょう。
+        </p>
+        <p>
+          実際に製作中のOS『SereneLinux』の実例を挙げながらわかりやすく解説していきます。
+          
+        </p>
+        <nav>
+          <ul class="topnav">
+            <li><a href="../index.html">トップページ</a></li>
+            <li><a href="preparation.html">準備編</a></li>
+            <li><a href="customize.html">カスタマイズ編</a></li>
+            <li><a href="makeiso.html">ISO作成編</a></li>
+            <li><a href="distribution.html">配布編</a></li>
+            <li class="right"><a href="about.html"  class="active">About</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+
+      <h2>
+        このサイトの概要的なやつ
+      </h2>
+      <p>
+        SereneLinuxの開発者が、SereneLinux開発中に困ったことを中心に初心者にわかりやすいように書いていくサイトです
+      </p>
+      <p>
+        CMSとかはあまり好きじゃないのでHTMLとCSSの手打ちで作ってます
+      </p>
+      <p>
+        JavaScriptは使っていないと胸を張って言いたいですが、コードの色付けに使用しています
+      </p>
+      <h2>
+        SereneLinuxってなんぞや
+      </h2>
+      <p>
+        現在開発されているBasix派生のディストリビューションです
+      </p>
+      <p>
+        このサイトの方法で開発されており、Xfce4を採用している軽量OS
+      </p>
+      <p>
+        現在はStandard版だけだが、今後はPro版やLite版もリリースしたいと考えています
+      </p>
+      <p>
+        <a href="serenelinux.xyz">公式サイト</a>からBeta版のダウンロード、開発チームへの参加ができるのでぜひ試してみてください
+      </p>
+
+      <h2>
+        TALLinuxについて
+      </h2>
+      <p>
+        SereneLinuxをベースにTALLinuxTeamが開発を行っているLinuxです
+      </p>
+      <p>
+        軽量志向のSereneLinuxとは違い、KDEを搭載してリッチになっています
+      </p>
+      <p>
+        Lxde版も作成したようでアンケートを行うようです
+      </p>
+      <p>
+        Beta4から配布されており、現在
+        <a href="https://t.co/wV9HeJQa4O">
+          公式サイト
+        </a>
+        からダウンロードできるようです
+      </p>
+      <p>
+        TALLinuxへの技術提供もSereneTeamが行っていますのでぜひ使ってみてください
+      </p>
+      <h2>
+        NXLinuxについて
+      </h2>
+      <p>
+        Basixをベースに開発が行われているLinuxです
+      </p>
+      <p>
+        筆者もNXLinuxの開発へ参加しています
+      </p>
+      <p>
+        詳しくは後で追記します...
+      </p>
+      <h2>
+        筆者について
+      </h2>
+      <p>
+        トップページと内容が一緒じゃねぇかボケェ って思った人いると思いますがもう少し詳しく自己紹介しようと思います
+      </p>
+      <p>
+        SereneTeamの3人目のメンバーの@Hayao0819です
+      </p>
+      <p>
+        SereneTeamでは、ファイルサーバ、BodhiBuilder、UI、Lite版を担当しています
+      </p>
+      <p>
+        出身はド田舎代表のグンマー帝国です
+      </p>
+
+      <h2>
+        このサイトを作った理由
+      </h2>
+      <p>
+        SereneLinuxの開発の際、BodhiBUilderの情報がものすごく少なかったのでこれからディストリビューションを作ろうと考えている人のために作りました
+      </p>
+      <p>
+        これからも随時更新していこうと思います
+      </p>
+
+      <h2>
+        以下更新履歴
+      </h2>
+      <h3>
+        2019/04/10
+      </h3>
+      <p>
+        <ul>
+          <li>
+            カスタマイズ編のテーマ選びについての続きを書いた
+          </li>
+        </ul>
+      </p>
+      <h3>
+        2019/04/08
+      </h3>
+      <p>
+        <ul>
+          <li>
+            カスタマイズ編の1~2を追加
+          </li>
+          <li>
+            このページにNXLinuxに関する情報を追記
+          </li>
+        </ul>
+      </p>
+      <h3>
+        2019/04/07
+      </h3>
+      <p>
+        <ul>
+          <li>誤字の修正（指摘してくださった方ありがとうございます）</li>
+          <li>BodhiBuilderの修正内容の誤字の修正（一番肝心な部分を間違えました すみませんm(_ _)m）</li>
+        </ul>
+      </p>
+      <h3>
+        2019/04/04
+      </h3>
+      <p>
+          <ul>
+            <li>
+              ISO作成編を追加
+            </li>
+            <li>
+              アクセスカウンター設置
+            </li>
+            <li>
+              メニューバー設置
+            </li>
+            <li>
+              Aboutの追加
+            </li>
+            <li>
+              誤字修正
+            </li>
+            <li>
+              トップページの作成
+            </li>
+            <li>
+                highlight.jsの設置、利用
+            </li>
+            <li>
+              中途半端にレスポンシブ対応
+            </li>
+          </ul>
+        </p>
+      <h3>
+        2019/04/02
+      </h3>
+      <p>
+        <ul>
+          <li>
+            作成
+          </li>
+        </ul>
+      </p>
+    </main>
+
+
+    <footer>
+      It is provided by SereneLinux.
+      <br>
+      Copyright
+      &copy; 2019 SereneTeam All Rights Reserved.
+      <img src="http://www.rays-counter.com/d432_f6_022/5ca3768641891/" alt="アクセスカウンター">
+    </footer>
+
+
+  </body>
+</html>
