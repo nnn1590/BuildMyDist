@@ -97,6 +97,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   padding: 3% 3%;
+  height: 100%;
 }
 
 
@@ -158,3 +159,4 @@ tbody tr th {
 tbody tr:nth-of-type(2n) {
   background: #f5f5f5;
 }
+
