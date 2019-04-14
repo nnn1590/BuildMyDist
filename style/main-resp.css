@@ -26,7 +26,7 @@ ul.topnav li a.active {
 ul.topnav li.right {
 	float: right;
 }
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 799px) {
 	ul.topnav li.right, ul.topnav li {
 		float: none;
 	}
