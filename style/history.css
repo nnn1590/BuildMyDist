@@ -1,0 +1,57 @@
+/*見出し系*/
+h2 {
+  background: #F8F8F8;
+  border-top: 2px solid #1B73BA;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+  box-sizing: border-box;
+  color: #1B73BA;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  padding: 10px 15px 10px;
+}
+h1 {
+  color: #1B73BA;
+  /*
+  text-shadow: 2px 2px 0 #fff,
+               -2px 2px 0 #fff,
+               2px -2px 0 #fff,
+               -2px -2px 0 #fff;
+  */
+  margin-left: -4%;
+  margin-right: -4%;
+  margin-top: -3%;
+}
+h3 {
+  border-bottom: 2px solid #1B73BA;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  padding-bottom: 5px;
+}
+h4 {
+  border-left: 2px solid #1B73BA;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 背景 */
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  background-color: #fff;
+}
+
+
+/* 箇条書き*/
+ul li {
+  line-height: 2
+}
+
+pre {
+  max-width: 100%;
+}
