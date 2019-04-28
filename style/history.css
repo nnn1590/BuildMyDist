@@ -39,11 +39,12 @@ h4 {
 
 /* 背景 */
 html {
-  background-color: #f0f0f0;
+  background-color: #191919;
 }
 
 body {
-  background-color: #fff;
+  background-color: #111111;
+  color: white;
 }
 
 
