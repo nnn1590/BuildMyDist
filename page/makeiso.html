@@ -76,111 +76,142 @@
         以下のコマンドで簡単に削除できます
       </p>
       <p>
-        <pre><code>$ sudo apt-get -y purge bodhibuilder
-$ sudo apt-get -y auoremove</code></pre>
+        <pre><code>$ sudo apt-get -y purge bodhibuilder</code></pre>
+        <pre><code>$ sudo apt-get -y auoremove</code></pre>
       </p>
       
-
       <h2>
-        公式バージョンのBodhiBuilderをインストールする
+        SereneLinuxのリポジトリからBodhiBuilderをインストールする
       </h2>
-      <h3>
-        パッケージをダウンロードする
-      </h3>
       <p>
-        <a href="https://sourceforge.net/projects/bodhibuilder/" target="_blank">
-          SOURCEFORGE
-        </a>
-        からダウンロードします
+        SereneLinuxのリポジトリでバグを修正済みのBodhiBuilderを配布しています
       </p>
       <p>
-        緑色のでっかい「ダウンロード」ボタンでダウンロードできます
+        リポジトリを追加してインストールします
       </p>
       <p>
-        Ubuntu16.04などの過去のバージョンのUbuntuを使用している人はそれに合ったバージョンをダウンロードしてください
+        以下のコマンドでリポジトリ追加→アップデート→BodhiBuilderのインストールまで全て行ってくれます
       </p>
       <p>
-        ダウンロードしたファイルをデスクトップに移動させて、名前を「bodhibuilder.deb」に変更してください
-      </p>
-      <h3>
-        パッケージをインストールする
-      </h3>
-      <p>
-        パッケージをインストールします
+        <pre><code>wget -qO - https://apt.yuki-lab.xyz/serene.key  | sudo apt-key add - ; sudo apt-add-repository "deb https://apt.yuki-lab.xyz/  bionic main" ; sudo apt update ; sudo apt install bodhibuilder</code></pre>
       </p>
       <p>
-        以下のコマンドを実行すれば大丈夫です
+        <ins datetime="2019-04-28T15:40:00+09:00" title="リポジトリの不具合">
+          2019年4月28日現在、「serenelinux-base」パッケージに不具合が生じており、正常に追加、インストールできません
+        </ins>
       </p>
+
+      <s>
+        <h2>
+            公式バージョンのBodhiBuilderをインストールする
+        </h2>
+      </s>
       <p>
-        <pre><code>$ sudo apt-get update && sudo apt-get -y upgrade
-$ sudo apt-get -y install `find ~/ -name "bodhibuilder.deb"`</code></pre>
+        <strong>
+            以下の情報はSereneTeamのリポジトリが使用できない場合にのみ利用してください
+        </strong>
       </p>
-      <p>
-        細かいコマンドの説明は省きますが、一行目でパッケージリストの同期とパッケージの更新を行い、二行目でユーザディレクトリ内を検索して「bodhibuilder.deb」のパスを取得してaptに渡してインストールしています
-      </p>
-      <p>
-        途中で設定ファイルがウンタラカンタラという質問が何回か来ますが基本的に「N」と入力してエンターキーを押せば大丈夫です
-      </p>
-      <p>
-        設定ファイルとかにこだわりがある人は各自で設定お願いします
-      </p>
-      <p>
-        なお、このコマンドはダウンロードしたファイルの名前を「bodhibuilder.deb」に変更しておかないとエラーが出て正常に実行できません
-      </p>
-      <p>
-        <pre><code>$ sudo rm `find ~/ -name "bodhibuilder.deb"`</code></pre>
-      </p>
-      <p>でダウンロードしたファイルを削除できます（インストール後は使わないので）</p>
+      <s>
+        <h3>
+              パッケージをダウンロードする
+        </h3>
+        <p>
+          <a href="https://sourceforge.net/projects/bodhibuilder/" target="_blank">
+            SOURCEFORGE
+          </a>
+          からダウンロードします
+        </p>
+        <p>
+          緑色のでっかい「ダウンロード」ボタンでダウンロードできます
+        </p>
+        <p>
+          Ubuntu16.04などの過去のバージョンのUbuntuを使用している人はそれに合ったバージョンをダウンロードしてください
+        </p>
+        <p>
+          ダウンロードしたファイルをデスクトップに移動させて、名前を「bodhibuilder.deb」に変更してください
+        </p>
+        <h3>
+          パッケージをインストールする
+        </h3>
+        <p>
+          パッケージをインストールします
+        </p>
+        <p>
+          以下のコマンドを実行すれば大丈夫です
+        </p>
+        <p>
+          <pre><code>$ sudo apt-get update && sudo apt-get -y upgrade</code></pre>
+          <pre><code>$ sudo apt-get -y install `find ~/ -name "bodhibuilder.deb"`</code></pre>
+        </p>
+        <p>
+          細かいコマンドの説明は省きますが、一行目でパッケージリストの同期とパッケージの更新を行い、二行目でユーザディレクトリ内を検索して「bodhibuilder.deb」のパスを取得してaptに渡してインストールしています
+        </p>
+        <p>
+          途中で設定ファイルがウンタラカンタラという質問が何回か来ますが基本的に「N」と入力してエンターキーを押せば大丈夫です
+        </p>
+        <p>
+          設定ファイルとかにこだわりがある人は各自で設定お願いします
+        </p>
+        <p>
+          なお、このコマンドはダウンロードしたファイルの名前を「bodhibuilder.deb」に変更しておかないとエラーが出て正常に実行できません
+        </p>
+        <p>
+          <pre><code>$ sudo rm `find ~/ -name "bodhibuilder.deb"`</code></pre>
+        </p>
+        <p>でダウンロードしたファイルを削除できます（インストール後は使わないので）</p>
 
 
-      <h2>BodhiBuilderを修正して動作するようにする</h2>
-      <p>
-        このサイトで一番の重要ポイントです
-      </p>
-      <p>
-        bodhibuilderは、ISOを作成するスクリプトとGUIで分離しています
-      </p>
-      <p>
-        今回はBodhibuilderのISO作成のスクリプトの方をいじっていきます
-      </p>
-      <p>
-        まず、Root権限でテキストエディターを起動します
-      </p>
-      <p>
-        <pre><code>$ gksu leafpad /usr/bin/bodhibuilder</code></pre>
-      </p>
-      <p>
-        出てきたウィンドウにパスワードを入力するとbodhibuilderのスクリプトを開いたテキストエディターが起動するはずです
-      </p>
-      <p>
-        この中には「シェルスクリプト」という言語でISO作成の内容が書かれています
-      </p>
-      <p>
-        難しいので理解する必要はないです
-      </p>
-      <p>
-        まず、LeafPadの設定を変更して行数を表示させましょう
-      </p>
-      <p>
-        「オプション」→「行番号を表示」にチェックを入れます
-      </p>
-      <p>
-        <img src="../images/leafpad_linenumber.PNG" alt="行数の表示設定">
-      </p>
-      <p>
-        そしたら、913行目を削除して以下のコードに置き換えます（失敗しないようにバックアップを取ることをおすすめします）
-      </p>
-      <p>
-        <pre><code>VESAMENU=`find /usr/lib/syslinux/modules/bios/ -name "vesamenu.c32" | grep "vesamenu.c32"` </code></pre>
-      </p>
-      <p>
-        その後、「ファイル」→「保存」で保存して閉じます
-      </p>
-      <p>
-        <img src="../images/leafpad_bodhibuilder.PNG" alt="">
-      </p>
+        <h2>
+          BodhiBuilderを修正して動作するようにする
+        </h2>
+        <p>
+          このサイトで一番の重要ポイントです
+        </p>
+        <p>
+          bodhibuilderは、ISOを作成するスクリプトとGUIで分離しています
+        </p>
+        <p>
+          今回はBodhibuilderのISO作成のスクリプトの方をいじっていきます
+        </p>
+        <p>
+          まず、Root権限でテキストエディターを起動します
+        </p>
+        <p>
+          <pre><code>$ gksu leafpad /usr/bin/bodhibuilder</code></pre>
+        </p>
+        <p>
+          出てきたウィンドウにパスワードを入力するとbodhibuilderのスクリプトを開いたテキストエディターが起動するはずです
+        </p>
+        <p>
+          この中には「シェルスクリプト」という言語でISO作成の内容が書かれています
+        </p>
+        <p>
+          難しいので理解する必要はないです
+        </p>
+        <p>
+          まず、LeafPadの設定を変更して行数を表示させましょう
+        </p>
+        <p>
+          「オプション」→「行番号を表示」にチェックを入れます
+        </p>
+        <p>
+          <img src="../images/leafpad_linenumber.PNG" alt="行数の表示設定">
+        </p>
+        <p>
+          そしたら、913行目を削除して以下のコードに置き換えます（失敗しないようにバックアップを取ることをおすすめします）
+        </p>
+        <p>
+            <pre><code>VESAMENU=`find /usr/lib/syslinux/modules/bios/ -name "vesamenu.c32" | grep "vesamenu.c32"` <code></pre>
+        </p>
+        <p>
+          その後、「ファイル」→「保存」で保存して閉じます
+        </p>
+        <p>
+          <img src="../images/leafpad_bodhibuilder.PNG" alt="">
+        </p>
+      </s>
       <h2>
-        bodhibuilderを実行してISOを作成する
+        BodhiBuilderを実行してISOを作成する
       </h2>
       <p>
         いよいよスクリプトを走らせます
