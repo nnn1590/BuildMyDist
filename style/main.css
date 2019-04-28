@@ -26,14 +26,9 @@ ul.topnav li a.active {
 ul.topnav li.right {
 	float: right;
 }
-@media screen and (max-width: 799px) {
-	ul.topnav li.right, ul.topnav li {
-		float: none;
-	}
-}
 nav {
   
-  margin-bottom: 7%;
+  margin-bottom: 4%;
   border-top: solid 5px #1B73BA;
   /*border-bottom: solid 5px #1B73BA;*/
   margin-left: -4%;
@@ -42,7 +37,7 @@ nav {
 
 /*見出し系*/
 h2 {
-  background: #F8F8F8;
+  background: #1d1d1d;
   border-top: 2px solid #1B73BA;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
@@ -89,15 +84,16 @@ code {
 
 /* 背景 */
 html {
-  background-color: #f0f0f0;
+  background-color: #191919;
 }
 
 body {
-  background-color: #fff;
+  background-color: #111111;
   margin-left: 10%;
   margin-right: 10%;
   padding: 3% 3%;
   height: 100%;
+  color: #fff;
 }
 
 
@@ -108,9 +104,11 @@ ul li {
 
 /*フッター*/
 footer{
-  background-color: gray;
+  background-color: #191919;
   margin-left: -4%;
   margin-right: -4%;
+  margin-bottom: -9%;
+  margin-top: 2%;
 }
 
 /*画像サイズ調整*/
@@ -144,10 +142,10 @@ td, th {
   text-align: center;
 }
 thead tr {
-  background-color: #1B73BA;
+  background-color: #191919;
 }
 thead tr th {
-  color: #fff;
+  color: #1B73BA;
   text-align: center;
 }
 tfoot {
@@ -157,5 +155,24 @@ tbody tr th {
   font-weight: bold;
 }
 tbody tr:nth-of-type(2n) {
-  background: #f5f5f5;
+  background: #191919;
+}
+
+.table {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/*リンク*/
+a {
+  text-decoration:none;
+  color: #6EDEFF;
+}
+a:hover {
+  text-decoration:underline;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #6EDEFF;
 }
