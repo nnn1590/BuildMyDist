@@ -62,6 +62,7 @@ h1 {
   margin-top: -3%;
 }
 h3 {
+  color: #1B73BA;
   border-bottom: 2px solid rgb(68, 71, 73);
   font-size: 18px;
   font-weight: bold;
@@ -93,7 +94,7 @@ body {
   margin-right: 10%;
   padding: 3% 3%;
   height: 100%;
-  color: #fff;
+  color: #FBFFEE;
 }
 
 
