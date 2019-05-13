@@ -203,7 +203,17 @@
           そしたら、913行目を削除して以下のコードに置き換えます（失敗しないようにバックアップを取ることをおすすめします）
         </p>
         <p>
-            <pre><code>VESAMENU=`find /usr/lib/syslinux/modules/bios/ -name "vesamenu.c32" | grep "vesamenu.c32"` <code></pre>
+            <pre><code>VESAMENU=`find /usr/lib/syslinux/modules/bios/ -name "vesamenu.c32" | grep "vesamenu.c32"` </code></pre>
+        </p>
+        <p>
+          （2019/05/07追記）938行目だったという報告もありました
+          <br>
+          編集する際は以下のコードから始まる部分を編集してください
+        </p>
+        <p>
+          <pre><code>VESAMENU=</code></pre>
+        <br>
+        （追記終わり）
         </p>
         <p>
           その後、「ファイル」→「保存」で保存して閉じます
