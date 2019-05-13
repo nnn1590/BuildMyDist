@@ -59,3 +59,17 @@ ul li {
 pre {
   max-width: 100%;
 }
+
+/*リンク*/
+a {
+  text-decoration:none;
+  color: #6EDEFF;
+}
+a:hover {
+  text-decoration:underline;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #6EDEFF;
+}
