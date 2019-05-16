@@ -3,56 +3,57 @@
 
 <!--  created with free sitemap generation system www.sitemapxml.jp  --> 
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/</loc>
+  <loc>http://serenelinux.html.xdomain.jp/</loc>
   <priority>1.0</priority>
-  <lastmod>2019-04-13T13:11:01+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/index.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-13T13:11:01+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/preparation.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/preparation.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-11T01:55:43+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/customize.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/customize.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-13T13:09:39+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/makeiso.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/makeiso.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-08T21:10:22+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/distribution.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/distribution.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-13T13:11:25+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/about.html</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/about.html</loc>
   <priority>0.8</priority>
-  <lastmod>2019-04-11T01:57:24+09:00</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:43:43+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/serenelinux.xyz</loc>
+  <loc>http://serenelinux.html.xdomain.jp/page/website.html</loc>
   <priority>0.8</priority>
-  <changefreq>daily</changefreq>
+  <lastmod>2019-05-13T18:11:18+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>http://serenelinux.php.xdomain.jp/page/serenelinux.xyz</loc>
-  <priority>0.7</priority>
-  <changefreq>daily</changefreq>
+  <loc>http://serenelinux.html.xdomain.jp/serenelinux.xyz</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
 </url>
 
 </urlset>
