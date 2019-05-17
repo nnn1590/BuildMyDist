@@ -108,6 +108,9 @@
           <li>
             OS名の変更
           </li>
+          <li>
+            Basix設定ファイルの削除
+          </li>
         </ol>
       </p>
 
@@ -903,6 +906,65 @@ user-session=xfce</code></pre>
       </p>
       <p>
         この変更はGrubやBodhiBuilderなど、全てに適用されます
+      </p>
+      <p>
+        OS名などは以下のファイルに情報が記載されています
+      </p>
+      <p>
+        <pre><code>/usr/lib/os-release</code></pre>
+      </p>
+      <p>
+        このファイルの1箇所を修正すれば大丈夫です
+      </p>
+      <p>
+        変更可能な変数は「PRETTY_NAME」、「HOME_URL」「SUPPORT_URL」です
+      </p>
+      <p>
+        実際に変更するのは「PRETTY_NAME」だけで大丈夫です
+      </p>
+      <p>
+        自分でディストリビューションのフォーラムなどを作るのであればそのURLを入力してください
+      </p>
+      <p>
+        上の変数以外は変更しないでください
+      </p>
+      <p>
+        リポジトリ追加やインストールができなくなります
+      </p>
+      <p>
+        参考に、SereneLinuxのソースを載せておきます
+      </p>
+      <p>
+        <pre><code>NAME="Ubuntu"
+VERSION="18.04.2 LTS (Bionic Beaver)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="SereneLinux_19Q1.7.1_R1"
+VERSION_ID="18.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=bionic
+ UBUNTU_CODENAME=bionic</code></pre>
+      </p>
+      <h2>
+        Basixの独自ファイルを削除する
+      </h2>
+      <p>
+        ここの操作は詳しい人のみ行ってください
+      </p>
+      <p>
+        Basixは独自に/etc/basixに設定ファイルを持っています
+      </p>
+      <p>
+        それを削除しないと上のOS名などが上書きされてしまいます
+      </p>
+      <p>
+        しかしPlymouthテーマ（起動スプラッシュ）などのデータも入っているためうかつに触ることはできません
+      </p>
+      <p>
+        （これ以降はあとで書きます...）
       </p>
       <h2>
         isoをビルドする
