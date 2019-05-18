@@ -1,3 +1,3 @@
 BuildMyDist
 ===============
-http://serenelinux.php.xdomain.jp/のデータ
+http://serenelinux.php.xdomain.jp/ のデータ

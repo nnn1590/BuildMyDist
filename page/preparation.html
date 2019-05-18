@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>
-      【2019年版】Ubuntu系のLinuxディストリビューションを自作しよう　～準備編～
+      【2019年版】Ubuntu系のGNU/Linuxディストリビューションを自作しよう　～準備編～
     </title>
     <meta name="description" content="
-      Ubuntu派生のLinux系OSの自作方法を解説したサイトです。
+      Ubuntu派生のUNIX系OSの自作方法を解説したサイトです。
       まずは準備編ということでベースとなるOSを決めたり、開発環境を構築したりしていきます
     ">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,7 +33,7 @@
           自分の好きなデスクトップ環境やソフトウェアを入れてオリジナルのOSを作成しましょう。
         </p>
         <p>
-          実際に製作中のOS『SereneLinux』の実例を挙げながらわかりやすく解説していきます。
+          実際に製作中のOS『Serene GNU/Linux』の実例を挙げながらわかりやすく解説していきます。
           
         </p>
         <nav>
@@ -79,7 +79,7 @@
         「自分専用のOS」というのもありですね♪。
       </p>
       <p>
-        SereneLinuxでは、『軽量で美しくわかりやすいUI』をコンセプトに開発を進めています。
+        Serene GNU/Linuxでは、『軽量で美しくわかりやすいUI』をコンセプトに開発を進めています。
       </p>
 
 
@@ -111,7 +111,7 @@
               定期的に更新していく時間（配布用のものを作成する場合のみ）
             </li>
             <li>
-              LinuxをGUIである程度カスタマイズできる能力（これから学ぶこともできます）
+              GNU/LinuxをGUIである程度カスタマイズできる能力（これから学ぶこともできます）
             </li>
             <li>
               問題があったときに自分で検索したり、コミュニティに質問したりできる能力
@@ -163,10 +163,10 @@
           なので高性能なパソコンが必要になります。
         </p>
         <h4>
-          SereneLinuxの開発に使われているPCの性能
+          Serene GNU/Linuxの開発に使われているPCの性能
         </h4>
           <p>
-            余談ですが、参考としてSereneLinuxの開発に使われている筆者のメインPCを紹介します。
+            余談ですが、参考としてSerene GNU/Linuxの開発に使われている筆者のメインPCを紹介します。
           </p>
           <p>
             このPCは7~8年前の古いPCですが現役でバリバリ動作しています。
@@ -223,7 +223,7 @@
         <strong>
           Basix
         </strong>
-        と言い、日本のLinux界隈で有名な
+        と言い、日本のGNU/Linux界隈で有名な
         <a href="http://simosnet.com/livecdroom/">
           ライブCDの部屋
         </a>
@@ -237,7 +237,7 @@
         です。
       </p>
       <p>
-        今回はbasix-4.0_x86_64.isoを利用して作成していきます。（SereneLinuxもこれで作成されています。）
+        今回はbasix-4.0_x86_64.isoを利用して作成していきます。（Serene GNU/Linuxもこれで作成されています。）
       </p>
       <p>このDLしたISOは削除せずにとっておいてください。
 
@@ -281,11 +281,11 @@
         Windowsを使っている人はWindows hostsから、macOSの方はOS X hostsからダウンロードしてください。
       </p>
       <p>
-        Linuxを使っている方はそれぞれのディストリビューションのパッケージ管理システムからインストールしてください。
+        GNU/Linuxを使っている方はそれぞれのディストリビューションのパッケージ管理システムからインストールしてください。
       </p>
       <p>
         Ubuntu系なら
-        <pre><code>$ sudo apt-get -y install virtualbox</code></pre>
+        <pre><code>$ sudo apt -y install virtualbox</code></pre>
       </p>
       <p>
         でインストールできます。
@@ -372,10 +372,10 @@
       </p>
 
       <h3>
-        LinuxをGUIである程度カスタマイズできる能力
+        GNU/LinuxをGUIである程度カスタマイズできる能力
       </h3>
       <p>
-        Linuxをカスタマイズするので必須ですね。
+        GNU/Linuxをカスタマイズするので必須ですね。
       </p>
       <p>
         自分で設定を変更したり、アイコンやテーマを変更します。
@@ -395,10 +395,10 @@
         問題があったときに自分で検索したり、コミュニティに質問したりできる能力
       </h3>
       <p>
-        これはLinux共通です。
+        これはGNU/Linux共通です。
       </p>
       <p>
-        上と関連していますが、Linuxはフリーであるがゆえにサポートもありません。
+        上と関連していますが、大抵のGNU/Linuxは無料であるがゆえにサポートもありません。(Red HatやSUSEなどのサポートがある有料ディストリビューションもあります)
       </p>
       <p>
         TwitterやYahoo知恵袋などで誰かに質問するか、自力でググることが大切です 。
@@ -536,10 +536,10 @@
           たまにここでフリーズっぽくなるのですが、放置して大丈夫。
         </li>
         <li>
-          あなたの名前の部分にディストリビューションの簡易名を（SereneLinuxではserene。）入力。
+          あなたの名前の部分にディストリビューションの簡易名を（Serene GNU/Linuxではserene。）入力。
         </li>
         <li>
-          コンピュータの名前に簡易名+「-PC」と入力。（SereneLinuxではSerene-PC。）
+          コンピュータの名前に簡易名+「-PC」と入力。（Serene GNU/LinuxではSerene-PC。）
         </li>
         <li>
           パスワードに自分のパスワードを入力。
@@ -587,14 +587,14 @@
 
 
     <footer>
-      It is provided by SereneLinux.
+      It is provided by Serene GNU/Linux.
       <br>
       Copyright
       &copy; 2019 SereneTeam All Rights Reserved.
       <p>
-        <script type="text/javascript" src="//ct2.shinobi.jp/sc/1744984">
+        <script type="text/javascript" src="https://ct2.shinobi.jp/sc/1744984">
         </script>
-        <noscript><img src="//ct2.shinobi.jp/ll/1744984" alt="カウンター">
+        <noscript><img src="https://ct2.shinobi.jp/ll/1744984" alt="カウンター">
         </noscript>
       </p>
     </footer>
