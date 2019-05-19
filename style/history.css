@@ -11,7 +11,7 @@
   font-weight: bold;
   margin: 0 0 20px;
   padding: 10px 15px 10px;
-  font-family: 'Noto Sans CJK JP', sans-serif;
+  font-family: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
 }
 h1 {
   color: #1B73BA;
@@ -31,13 +31,13 @@ h3 {
   font-weight: bold;
   margin: 0 0 20px;
   padding-bottom: 5px;
-  font-family: 'Noto Sans CJK JP', sans-serif;
+  font-family: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
 }
 h4 {
   border-left: 2px solid #1B73BA;
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Noto Sans CJK JP', sans-serif;
+  font-family: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
 }
 
 /* 背景 */
